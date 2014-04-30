@@ -78,8 +78,10 @@ Bulb.prototype.write = function(data) {
     this.lx.lightsOff(this.bulb);
   }
 
-  this.lx.lightsColour(data.hue, data.sat*256, data.bri*256, 0x0dac/*TODO*/, data.transitiontime||200, this.bulb);
-
+  if (data.hue && data.sat && data.bri) {
+    this.lx.lightsColour(data.hue, data.sat*256, data.bri*256, 0x0dac/*TODO*/, data.transitiontime||200, this.bulb);
+  }
+  
   if (data.on) {
     this.lx.lightsOn(this.bulb);
   }
