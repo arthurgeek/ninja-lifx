@@ -10,9 +10,9 @@
     "type": "git",
     "url": "https://github.com/elliots/ninja-lifx"
   },
-  "dependencies": {
-    "lifx": "git://github.com/ninjablocks/lifxjs.git"
-  },
   "author": "Elliot Shepherd",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "2.4.1"
+  }
 }
